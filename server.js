@@ -2,7 +2,7 @@ const dotenv = require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
 const bodyparser = require("body-parser");
-const sendEmail = require("./utils/sendEmail");
+const sendEmail = require("./server/utils/sendEmail.js");
 
 const app = express();
 
@@ -13,7 +13,7 @@ app.use(cors())
 
 //Routes
 app.get("/",async (req,res)=>{
-    res.send("Home Page")
+    res.json({"hola":"hi"})
 })
 
 app.post("/sendEmail", async (req,res)=>{
