@@ -11,9 +11,14 @@ app.use(express.json())
 app.use(bodyparser.json())
 app.use(cors())
 
+
 //Routes
 app.get("/",async (req,res)=>{
     res.json({"hola":"hi"})
+})
+
+app.get("/sendEmail", async (req,res)=>{
+    res.json({"hola":"sendEmail"})
 })
 
 app.post("/sendEmail", async (req,res)=>{
